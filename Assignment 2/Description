@@ -1,0 +1,12 @@
+You will be writing two dialogue act taggers for SWBD DAMSL. You will use your labeled data to debug them and pick the best features for the “advanced” tagger. You could simply split the labeled data by randomly putting roughly 25% of the data in the development set and using the rest to train your classifier. In this case, you would include entire conversations in either the training or development sets. In this assignment, it is up to you how you use your labeled data to evaluate different features. You could use a certain percentage of conversations for development, or you could use k-fold cross-validation.
+You should try a set of features that we'll call baseline. In the baseline feature set, for each utterance you include:
+• a feature for whether or not the speaker has changed in comparison with the previous utterance.
+• a feature marking the first utterance of the dialogue.
+• a feature for every token in the utterance (see the description of CRFsuite for an
+example).
+• a feature for every part of speech tag in the utterance (e.g., POS_PRP POS_RB POS_VBP POS_.).
+You'll need to create a Python program (baseline_tagger.py) that reads in a directory of CSV files (INPUTDIR), trains a CRFsuite model, tags the CSV files in (TESTDIR), and prints the output labels to OUTPUTFILE
+>python3 baseline_tagger.py INPUTDIR TESTDIR OUTPUTFILE
+You should try at least one other set of features that we'll call advanced. The advanced feature set should include more information than the baseline feature set. The idea is that you want to improve performance. As discussed in the grading section, part of your grade depends on developing a feature set better than the baseline. You'll need to create a Python program (advanced_tagger.py) that reads in a directory of CSV files (INPUTDIR), trains a CRFsuite model using the advanced features, tags the CSV files in (TESTDIR), and prints the output labels to OUTPUTFILE
+>python3 advanced_tagger.py INPUTDIR TESTDIR OUTPUTFILE
+Your programs, baseline_tagger.py and advanced_tagger.py, will need to be able to tag CSV files with blank labels as well as labeled development data.
