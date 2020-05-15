@@ -63,10 +63,10 @@ if __name__=="__main__":
     outputFileName=sys.argv[1]
     getStatistics(outputFileName)
     print(outputFileName)
-    print("Right Guessed Ham: "+str(rightGuessHam))
+    '''print("Right Guessed Ham: "+str(rightGuessHam))
     print("Right Guessed Spam: "+str(rightGuessSpam))
     print("TrueHam: "+str(trueHam))
     print("TrueSpam: "+str(trueSpam))
     print("Guessed Ham: "+str(guessedHam))
-    print("Guessed Spam: "+str(guessedSpam))
+    print("Guessed Spam: "+str(guessedSpam))'''
     evaluate()
