@@ -1,0 +1,20 @@
+Assignment 2 Report
+
+Name: Neha Atul Godse
+
+1. Describe how you evaluated your baseline and advanced features:
+	Calculated the total number of files. Moved 25% of the files from the training directory to the testing directory.
+	Trained the model using pycrfsuite and produced the labels for testing data and saved the label in the output.txt.
+	For evaluation, opened each file and compared the actual label in the file with that written in the output.txt.
+	Used the accuracy formula to calculate the accuracy based on the number of correctly guessed labels.
+
+2. Accuracy of baseline features during your evaluation: 72.20920686409964
+
+3. Describe your advanced feature set:
+	Advanced feature set includes all the feature set from the baseline feature set. Additionally, it includes, combination of previous and current token, 
+	combination of previous and current part of speech, total length of tokens, last utterance.
+
+4. If you tried and rejected alternate advanced feature sets, please describe them:
+	Combination of current and next token, combination of current and next part of speech, removing stop words.
+
+5. Accuracy of advanced features was: 74.46987445185319
